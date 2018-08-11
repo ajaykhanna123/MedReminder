@@ -56,7 +56,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         Log.d("notif_task", "onReceive: " + intent.getStringExtra("task"));
 
         if(found==1) {
-            MediaPlayer mediaPlayer=MediaPlayer.create(context, Settings.System.DEFAULT_RINGTONE_URI);
+            MediaPlayer mediaPlayer=MediaPlayer.create(context, Settings.System.DEFAULT_ALARM_ALERT_URI);
             mediaPlayer.start();
             Notification.Builder builder = new Notification.Builder(context);
             builder.setContentText(intent.getStringExtra("task")).setContentTitle("Medicine Reminder")
